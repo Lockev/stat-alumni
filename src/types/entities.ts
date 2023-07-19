@@ -15,16 +15,23 @@ export interface Product {
 	discount: string;
 }
 
-export type Users = User[];
-export interface User {
+export type Alumnis = Alumni[];
+export interface Alumni {
 	id: number;
-	name: string;
+	firstname: string;
+	lastname: string;
 	avatar: string;
+	diploma_file: string;
 	email: string;
-	biography: string;
-	position: string;
+	graduation_year: string;
+	diploma: string;
+	linkedin: string;
+	current_position: string;
+	current_company: string;
+	last_post: string;
+	current_type_post: string;
 	country: string;
-	status: string;
+	freelance: boolean;
 }
 
 export type PlaygroundAction = (typeof playgroundActions)[number];
