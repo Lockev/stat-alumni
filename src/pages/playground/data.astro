@@ -1,9 +1,12 @@
 ---
 /* http://localhost:2121/playground/data/ */
 
+// import { computed } from 'vue';
 import Code from 'astro/components/Code.astro';
 import LayoutSidebar from '../../app/LayoutSidebar.astro';
 import { getUsers, getProducts } from '../../services/index.js';
+
+// const computedProducts = computed(() => getProducts())
 
 const products = JSON.stringify(getProducts(), null, 2);
 
