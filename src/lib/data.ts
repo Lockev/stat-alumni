@@ -31,3 +31,18 @@ export function asset(path: string) {
 	// NOTE: Fetching remote assets from the Hugo admin dashboard Vercel dist.
 	return `${REMOTE_ASSETS_BASE_URL}/${path}`;
 }
+
+export function getMTDData() {
+	const apiEndpoint = ""
+
+	return fetch(apiEndpoint)
+		.then(
+			(r) =>
+				console.log(r)
+		)
+		.catch((e) => {
+			console.error(e);
+			throw Error('Invalid API data!');
+		});
+}
+
