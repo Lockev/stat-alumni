@@ -1,16 +1,25 @@
 ---
 /* eslint max-lines: 'off' */
 
-import { asset, getMTDData } from '../lib/data';
+import { asset, test, getMTDData } from '../lib/data';
 
-// const MTDData = await getMTDData();
-
+const mtds = await getMTDData();
+console.log(mtd)
 ---
+<script>
+	
+</script>
 
 <div class="px-4 pt-6">
 	<div
 		class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800"
 	>
+	{ mtds.map((mtd) => (
+			<div>
+				{mtd.name}
+			</div>
+		)) 
+	}
 		<div class="mb-4 text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">
 			Choix du diplome
 		</div>

@@ -32,17 +32,15 @@ export function asset(path: string) {
 	return `${REMOTE_ASSETS_BASE_URL}/${path}`;
 }
 
-export function getMTDData() {
-	const apiEndpoint = ""
+export async function getMTDData() {
+	const apiEndpoint = "https://quyanh-phung.fr/api/alumni/all"
+	console.log(apiEndpoint)
 
-	return fetch(apiEndpoint)
-		.then(
-			(r) =>
-				console.log(r)
-		)
-		.catch((e) => {
-			console.error(e);
-			throw Error('Invalid API data!');
-		});
+	const data = await fetch(apiEndpoint)
+	return data.json()
 }
+
+export const test = "test"
+
+console.log("test")
 
